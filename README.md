@@ -1,35 +1,53 @@
 # swiftui-accessibility-tutorial
 In this repository I will focus on dissecting the iOS Settings options and connecting them to the available technical modifiers and configurations needed to support them in our apps.
-If you would like to read about what will be required, accessibility-wise for complying with the Accessibility Act, by June 2025 and what options we do have in iOS to make our apps more accessible, please refer to my previous article https://www.linkedin.com/pulse/european-accessibility-act-technicals-options-ios-rodeker-nceze/?trackingId=9CT%2F788nRqSlRVOaDnNMlQ%3D%3D.
+
+If you would like to read about what will be required, accessibility-wise for complying with the Accessibility Act, 
+by June 2025 and what options we do have in iOS to make our apps more accessible, please refer to my previous 
+article https://www.linkedin.com/pulse/european-accessibility-act-technicals-options-ios-rodeker-nceze/?trackingId=9CT%2F788nRqSlRVOaDnNMlQ%3D%3D.
 
 ## Accessibility development strategy
-Either if you’re making your app more accessible, or you’re just starting to add accessibility features within it, before engaging in the odyssey of extending your product usage and making it more usable for a larger number of users who either on a permanent or temporal basis need specific features, I would suggest developing a gradual plan and getting very clear agreements within your teams (QA/Development/Project Managers/Support teams/Legal teams, etc), about how the roadmap will be when it comes to adding more accessibility features to your app. There are tons of configurations which are possible. You can support external keyboards / braille devices for example, but if you’re just starting, making sure that VoiceOver works well would be a base step. 
+Either if you’re making your app more accessible, or you’re just starting to add accessibility features within it, before engaging in the odyssey of extending your product usage and making it more usable for a larger number of users who either on a permanent or temporal basis need specific features, 
+
+I would suggest developing a gradual plan and getting very clear agreements within your teams (QA/Development/Project Managers/Support teams/Legal teams, etc), about how the roadmap will be when it comes to adding more accessibility features to your app. There are tons of configurations which are possible. You can support external keyboards / braille devices for example, but if you’re just starting, making sure that VoiceOver works well would be a base step. 
+
 I suggest defining a concrete basic set of accessibility features and develop a plan to bring new portions of your app up to standard, but also bear in mind what you will do with older code, older screens, which you might not be touching for a while. Being clear about that will save you time and avoid misunderstanding. Let’s say that you do not come into concrete written agreements about what is possible to test and what is (for the moment) not covered, then you could end up in a situation where your QA team starts trying out very different settings from within the Apple Settings when it comes to accessibility, and if each QA has a different testing strategy and pay attention to different settings, and you did not establish an acquisition gradual step by step strategy, this will generate noise, back and forth, ongoing discussions among different parts of your team… it will be messy… accessibility is not a clearly defined topic and do have subjective interpretations, even though the platforms establish certain guidelines. 
-Also you might want to consider the time and effort that you realistically have within your schedule to bring more accessibility into your app. Remember that by June 2025 you should comply with the Accessibility Act requirements, and unless there is an extension, there would be scenarios that your products will need to cover. As it is happening with GDPR, where lawyers and lawyers companies are checking the adoption of the directives, I think that the same will start happening with Accessibility, so pay attention, be careful, use your resources to make sure that in a reasonable amount of time you can reach a good-enough accessibility coverage… and then, build up from there… over time. Do not try to go for all, from the very beginning. And make sure that you do not end up in an unorganized testing / bug reporting / details discussion / eternal backs and forths. 
+
+Also you might want to consider the time and effort that you realistically have within your schedule to bring more accessibility into your app. Remember that by June 2025 you should comply with the Accessibility Act requirements, and unless there is an extension, there would be scenarios that your products will need to cover. 
+As it is happening with GDPR, where lawyers and lawyers companies are checking the adoption of the directives, 
+I think that the same will start happening with Accessibility, so pay attention, be careful, use your resources to make sure that in a reasonable amount of time you can reach a good-enough accessibility coverage… and then, build up from there… over time. Do not try to go for all, from the very beginning. 
+And make sure that you do not end up in an unorganized testing / bug reporting / details discussion / eternal backs and forths. 
 So, let’s go to analyze the anatomy of accessibility in an iPhone.
 
 ## Usage
 Making an analysis of some studies or surveys, you could give yourself an idea about what accessibility features are the most needed / used. I have found some resources which could be a guide for deciding the priorities when it comes to adopting certain features. For example in this survey of millions of users in the Netherlands, in 2024, it was found that 38% of persons turn on dark mode, while 22% make their fonts larger, 9,7% use zoom on the screen, 9,8% have turned on bold text, 3,6% use speak selection, 0,02% use VoiceOver. https://appt.org/en/stats.
+
 But, I would not recommend just reading current usage statistics, since it could be that people do not make use of certain features just because the support offered right now is not great. 
+
 Another idea to collect numbers, is to try finding scientific studies, which are usually constricted to certain application domains, but you could perhaps find some closer to your user base, such as for example https://www.sciencedirect.com/science/article/abs/pii/S095058492400123X.
 In this sense, which accessibility support you would prioritize will be very related to the field in which your app is working.
 
 
 ## Some reflections on tracking
-If you are going to track which accessibility values your users are selecting, I would think carefully about it, most probably there is a reduced number of users which will set some accessibility features, make sure that you disclose in the Apple Privacy Pages any tracking you use about these sensitive values. And if possible, do not make any tracking on them.
+If you are going to track which accessibility values your users are selecting, 
+I would think carefully about it, most probably there is a reduced number of users which will set some accessibility features,
+make sure that you disclose in the Apple Privacy Pages any tracking you use about these sensitive values. And if possible, do not make any tracking on them.
 
 ## Learning accessibility
-Apple has a great tutorial when it comes to perhaps the most difficult feature to learn: VoiceOver. I would recommend doing that tutorial, more than just once. It took me around 3 or 4 times till I started to get a feeling of the gestures.
+Apple has a great tutorial when it comes to perhaps the most difficult feature to learn: VoiceOver. 
+I would recommend doing that tutorial, more than just once. It took me around 3 or 4 times till I started to get a feeling of the gestures.
 
 <img width="578" alt="Screenshot 2025-03-07 at 11 37 59 PM" src="https://github.com/user-attachments/assets/ffec04df-0389-402a-9ab3-a30967c4d0e5" />
 
 
 ## Quick testing while developing
 ### Accessibility Inspector
+
 <img width="438" alt="Screenshot 2025-03-08 at 12 41 29 PM" src="https://github.com/user-attachments/assets/e87bd830-b1d8-475f-ad20-0d84e59a059b" />
 
 
-Support yourself with the accessibility inspector. In my experience it is unreliable. If you see that it stops working, try closing it completely and launching it again. When it works, it does help a lot to inspect elements and play around with some settings in the simulator.
+Support yourself with the accessibility inspector. In my experience it is unreliable. If you see that it stops working,
+try closing it completely and launching it again. When it works, it does help a lot to inspect elements and play around with some settings in the simulator.
+
 You can also use the Accessibility Inspector to run audits and get warnings about some of the most ground features.
 
 <img width="258" alt="Screenshot 2025-03-07 at 11 38 41 PM" src="https://github.com/user-attachments/assets/77c9b00f-f20e-4d46-874d-f8413434923f" />
@@ -37,7 +55,10 @@ You can also use the Accessibility Inspector to run audits and get warnings abou
 
 
 ### Previews
-Previous are a great way to quickly have feedback, ideally you should rely on the system defined font types, I recommend against adjusting the font sizes unless you have a custom font, otherwise you will lose all the  benefits from the development environment, such as previews and modifiers overview. Using a system font with a different sizing will cause you issues, since there is not way to make the previews and Apple UIs-modifier work, so it will slow you down while developing, just because your font is 1 pixel bigger or smaller. It’s not a good practice. 
+Previous are a great way to quickly have feedback, ideally you should rely on the system defined font types,
+I recommend against adjusting the font sizes unless you have a custom font, otherwise you will lose all the  benefits from the development environment,
+such as previews and modifiers overview. Using a system font with a different sizing will cause you issues, 
+since there is not way to make the previews and Apple UIs-modifier work, so it will slow you down while developing, just because your font is 1 pixel bigger or smaller. It’s not a good practice. 
 
 <img width="540" alt="Screenshot 2025-03-07 at 10 45 24 PM" src="https://github.com/user-attachments/assets/fc3f226d-65d4-4798-83c9-d31d77a04b21" />
 <img width="761" alt="Screenshot 2025-03-07 at 10 45 46 PM" src="https://github.com/user-attachments/assets/2a00c2a5-fd28-482e-b55c-f6b50241768f" />
@@ -45,7 +66,8 @@ Previous are a great way to quickly have feedback, ideally you should rely on th
 <img width="1368" alt="Screenshot 2025-03-08 at 12 32 16 PM" src="https://github.com/user-attachments/assets/68c64ca9-a50e-4521-9992-f2ed17fe74d1" />
 
 ## Auditing your apps and testing
-Apple has great documentation and step by step testing instructions for each of the accessibility groups. I recommend you to check them out: https://developer.apple.com/documentation/accessibility/performing-accessibility-testing-for-your-app
+Apple has great documentation and step by step testing instructions for each of the accessibility groups. 
+I recommend you to check them out: https://developer.apple.com/documentation/accessibility/performing-accessibility-testing-for-your-app
 
 ### Automatic auditing
 You can also create an UI test target and perform automatic accessibility audits.
@@ -56,28 +78,89 @@ You will be able to see the test errors and also the tests results logs are pret
 <img width="1184" alt="Screenshot 2025-03-08 at 12 48 23 PM" src="https://github.com/user-attachments/assets/2f286da6-d7c0-42e1-a75e-d02f8dca000d" />
 <img width="1012" alt="Screenshot 2025-03-08 at 12 49 21 PM" src="https://github.com/user-attachments/assets/a97e129d-1cab-43a7-9fe9-b60af5d4f29d" />
 
+#### Ignoring legacy UI
+For UI elements which you can’t improve at the moment, you can ignore them in the automated UI checks with the following code
+
+```swift
+import XCTest
+
+final class AccessibilityTutorialUIAudit: XCTestCase {
+
+    func testAutomatedAccessibility() {
+        let myApp = XCUIApplication()
+        myApp.launch()
+        
+        // this is how you ignore specific elements which you know
+        // have issues and you can't solve at the moment (like legacy UI)
+        let handler: ((XCUIAccessibilityAuditIssue) -> Bool) = { issue in
+            if issue.element == myApp.staticTexts["stepper.description"] {
+                false // ignore problems with this text which is clipped
+            } else {
+                true // check any other error
+            }
+        }
+        
+        do {
+            try myApp.performAccessibilityAudit(for: .all, handler)
+        } catch {
+            XCTFail("The automated accessibility audit fail because [\(error.localizedDescription)]")
+        }
+    }
+}
+
+```
 
 ## Environment values
 There are a set of environments values that you will have at your disposition while implementing accessibility in SwiftUI, you can access to all of them here: https://developer.apple.com/documentation/swiftui/environmentvalues/
-They will allow you to react to user’s choices, such as not playing any animation on images https://developer.apple.com/documentation/swiftui/environmentvalues/accessibilityplayanimatedimages or reduceMotion which will indicate you that animations should be slower https://developer.apple.com/documentation/swiftui/environmentvalues/accessibilityreducemotion
+
+They will allow you to react to user’s choices, such as not playing any animation on images https://developer.apple.com/documentation/swiftui/environmentvalues/accessibilityplayanimatedimages 
+or reduceMotion which will indicate you that animations should be slower https://developer.apple.com/documentation/swiftui/environmentvalues/accessibilityreducemotion
+
+### Environment value: Assistive Access
+*Settings  > Accessibility > Assistive Access*
+https://developer.apple.com/documentation/swiftui/environmentvalues/accessibilityassistiveaccessenabled
+Assistive Access is a unique iOS feature that facilitates independent iPhone use for those with cognitive impairments. Assistive Access-optimized essential apps and experiences include larger on screen elements, more focused functionality, and an easier-to-navigate interface that makes it clear what actions are feasible.
+
+### Environment value: Dim Flashing Lights
+*Settings  > Accessibility > Motion > Dim Flashing Lights*
+From iOS 17. 
+Whether the setting to reduce flashing or strobing lights in video content is on. This setting can also be used to determine if UI in playback controls should be shown to indicate upcoming content that includes flashing or strobing lights.
+https://developer.apple.com/documentation/swiftui/environmentvalues/accessibilitydimflashinglights
+https://developer.apple.com/documentation/mediaaccessibility/responding-to-changes-in-the-flashing-lights-setting
+
+### Environment value: Differentiate without color
+*Settings  > Accessibility > Display and Text Size > Differentiate without color*
+If this is true, UI should not convey information using color alone and instead should use shapes or glyphs to convey information.
+https://developer.apple.com/documentation/swiftui/environmentvalues/accessibilitydifferentiatewithoutcolor
+Environment value: invert colors
+
+### Settings  > Accessibility >  Display and Text Size > Classic Invert
+*If this property’s value is true then the display will be inverted. In these cases it may be needed for UI drawing to be adjusted to in order to display optimally when inverted.*
+https://developer.apple.com/documentation/swiftui/environmentvalues/accessibilityinvertcolors
+
 
 ## Accessibility traits
 There is a way to add or remove traits to your views, for example, if you want to inform that some of your views update frequently, you could opt for adding the trait “updatesFrequently” to it https://developer.apple.com/documentation/swiftui/accessibilitytraits/updatesfrequently
 
 ## Accessibility and UI tests
 Be careful with some accessibility modifiers, such as hidden children or setting isAccessibilityElement, since they have an effect on how the accessibility tree will be generated and therefore some identifiers might turn out hidden.
-Accessibility Anatomy 
+
+
+# Accessibility Anatomy 
 To begin with, I will try to be concise. I will list each of the options, groups by accessibility area: Vision / Hearing / Physical and Motor / Speech / Accessories and General.
 Example applications
+
+
 Apple itself has listed, for each of the categories mentioned above, some applications which have done a great job, so for inspiration you can checkout this list https://apps.apple.com/mv/story/id1266441335
 
 ## Vision
 In this group of settings we do have VoiceOver, Motion, Display and Text, Zoom and Spoken Content.
-![IMG_9538](https://github.com/user-attachments/assets/ae2ff757-c590-4b72-ba8c-f064bfbbfaf9)
 
+<img width="373" alt="Screenshot 2025-03-07 at 11 42 12 PM" src="https://github.com/user-attachments/assets/ae2ff757-c590-4b72-ba8c-f064bfbbfaf9" />
 
 ### VoiceOver
 For VoiceOver, what you could do within your app includes:
+
 - Adding appropriate descriptions for relevant images
 - Try not to add descriptions to each single little image and icon to avoid overloading the user.
 - Use meaningful accessibility labels on the views which you want to describe in more detail. Work closely with your copy team, to make also accessibility available in different languages. https://developer.apple.com/documentation/swiftui/view/accessibilitylabel(_:)
@@ -98,7 +181,6 @@ An interesting helpful addition would be to add a new rotor entry, that will be 
 Sorting: VoiceOver and other assistive technology operate in a manner similar to natural reading. This implies top left to bottom right in English for example. For the most part, assistive technology made the correct choice. However, occasionally we create designs that don't read like this. The order in which assistive technology accesses components can be configured by using the.accessibility(sortPriority: ) modification. You must group elements in a stack (HStack, VStack, or ZStack) in order to accomplish this. Next, apply the modifier.accessibilityElement(children:.contain). VoiceOver will focus on the item earlier if we give.accessibility(sortPriority: ) a greater number. 
 
 <img width="573" alt="Screenshot 2025-03-07 at 11 42 12 PM" src="https://github.com/user-attachments/assets/c5e8019a-d192-4d06-ab6c-06ef5b964837" />
-
 
 
 ### Motion
