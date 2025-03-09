@@ -17,11 +17,8 @@ by June 2025 and to inform yourself about deadlines and the full scope of the ac
 
 
 
-# Accessibility Anatomy 
-To begin with, I will try to be concise. I will list each of the options, groups by accessibility area: Vision / Hearing / Physical and Motor / Speech / Accessories and General.
-Example applications
-
-Apple itself has listed, for each of the categories mentioned above, some applications which have done a great job, so for inspiration you can checkout this list https://apps.apple.com/mv/story/id1266441335
+# Accessibility per area 
+Apple itself has listed, for each of the categories of accessibiliy features, some applications which have done a great job, so for inspiration you can checkout this list https://apps.apple.com/mv/story/id1266441335
 
 - [Vision](https://github.com/barbaramartina/swiftui-accessibility-tutorial/blob/main/vision.md)
 - [Motion](https://github.com/barbaramartina/swiftui-accessibility-tutorial/blob/main/motion.md)
