@@ -12,7 +12,7 @@ by June 2025 and to inform yourself about deadlines and the full scope of the ac
 4. [Apple guidelines](https://github.com/barbaramartina/swiftui-accessibility-tutorial/blob/main/apple-guidelines.md)
 5. [Learning Accessibility](https://github.com/barbaramartina/swiftui-accessibility-tutorial/blob/main/learning-accessibility.md)
 6. [Auditing and testing your app](https://github.com/barbaramartina/swiftui-accessibility-tutorial/blob/main/testing-auditing.md)
-7. [Accessibility traits](https://github.com/barbaramartina/swiftui-accessibility-tutorial/blob/main/acessibility-traits)
+7. [Accessibility traits](https://github.com/barbaramartina/swiftui-accessibility-tutorial/blob/main/acessibility-traits.md)
 8. [Environment Values](https://github.com/barbaramartina/swiftui-accessibility-tutorial/blob/main/environtment-values.md)
 
 
