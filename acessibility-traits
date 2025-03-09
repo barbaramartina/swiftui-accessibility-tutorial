@@ -1,0 +1,6 @@
+# Accessibility traits
+There is a way to add or remove traits to your views, for example, if you want to inform that some of your views update frequently, you could opt for adding the trait “updatesFrequently” to it https://developer.apple.com/documentation/swiftui/accessibilitytraits/updatesfrequently
+
+## Accessibility and UI tests
+Be careful with some accessibility modifiers, such as hidden children or setting isAccessibilityElement, since they have an effect on how the accessibility tree will be generated and therefore some identifiers might turn out hidden.
+
