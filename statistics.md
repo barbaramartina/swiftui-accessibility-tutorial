@@ -9,3 +9,9 @@ But, I would not recommend just reading current usage statistics, since it could
 
 Another idea to collect numbers, is to try finding scientific studies, which are usually constricted to certain application domains, but you could perhaps find some closer to your user base, such as for example https://www.sciencedirect.com/science/article/abs/pii/S095058492400123X.
 In this sense, which accessibility support you would prioritize will be very related to the field in which your app is working.
+
+
+## Some reflections on tracking
+If you are going to track which accessibility values your users are selecting, 
+I would think carefully about it, most probably there is a reduced number of users which will set some accessibility features,
+make sure that you disclose in the Apple Privacy Pages any tracking you use about these sensitive values. And if possible, do not make any tracking on them.
