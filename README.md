@@ -1,4 +1,7 @@
 # SwiftUI Accessibility Tutorial
+
+<img width="438" alt="Screenshot 2025-03-08 at 12 41 29 PM" src="https://github.com/user-attachments/assets/006e62d6-11da-4a06-9a71-efcb71cfc567" />
+
 In this repository I will focus on dissecting the iOS Settings options and connecting them to the available technical modifiers and configurations needed to support them in our apps.
 
 If you would like to read about what will be required, accessibility-wise for complying with the Accessibility Act, 
