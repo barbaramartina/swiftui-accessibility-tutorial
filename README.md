@@ -165,6 +165,41 @@ For example, if we limit a button to an specific dynamic sizes, then we can offe
     }
 ```
 
+### Environment value: Play animated images
+*Settings  > Accessibility > Motion > Auto-Play animated images*
+https://developer.apple.com/documentation/swiftui/environmentvalues/accessibilityplayanimatedimages
+
+### Environment value: Prefers head anchor alternatives
+*Settings  > Accessibility >  *
+https://developer.apple.com/documentation/swiftui/environmentvalues/accessibilityprefersheadanchoralternative
+
+### Environment value: quick actions enabled
+*Settings  > Accessibility >  *
+https://developer.apple.com/documentation/swiftui/environmentvalues/accessibilityquickactionsenabled
+
+### Environment value: reduce motion
+*Settings  > Accessibility >  Motion > Reduce Motion*
+https://developer.apple.com/documentation/swiftui/environmentvalues/accessibilityreducemotion
+
+### Environment value: reduce transparency
+*Settings  > Accessibility >  Display and Text Size > Reduce transparency*
+https://developer.apple.com/documentation/swiftui/environmentvalues/accessibilityreducetransparency
+
+### Environment value: show buttons shapes
+*Settings  > Accessibility >   Display and Text Size > Show buttons shape*
+https://developer.apple.com/documentation/swiftui/environmentvalues/accessibilityshowbuttonshapes
+
+### Environment value: switch control enabled
+*Settings  > Accessibility >  (Physical and motor) Switch Control*
+https://developer.apple.com/documentation/swiftui/environmentvalues/accessibilityswitchcontrolenabled
+
+### Environment value: voiceover enabled
+*Settings  > Accessibility >  VoiceOver*
+https://developer.apple.com/documentation/swiftui/environmentvalues/accessibilityvoiceoverenabled
+
+### Environment value: Legibility weight
+*Settings  > Accessibility >  Display and Text Sizes > Bold Text *
+https://developer.apple.com/documentation/swiftui/environmentvalues/legibilityweight
 
 
 ## Accessibility traits
