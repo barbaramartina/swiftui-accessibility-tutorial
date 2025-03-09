@@ -101,13 +101,13 @@ final class AccessibilityTutorialUIAudit: XCTestCase {
         }
         
         do {
-            try myApp.performAccessibilityAudit(for: .all, handler)
+            // you can either audit all, or a set of checks
+            try myApp.performAccessibilityAudit(for: [.contrast, .dynamicType, .textClipped], handler)
         } catch {
             XCTFail("The automated accessibility audit fail because [\(error.localizedDescription)]")
         }
     }
 }
-
 ```
 
 ## Environment values
