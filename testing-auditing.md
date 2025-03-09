@@ -3,7 +3,7 @@
 
 <kbd>
 <img width="338" alt="Screenshot 2025-03-08 at 12 41 29 PM" src="https://github.com/user-attachments/assets/e87bd830-b1d8-475f-ad20-0d84e59a059b" />
-</kbd>kbd>
+</kbd>
 
 Support yourself with the accessibility inspector. In my experience it is unreliable. If you see that it stops working,
 try closing it completely and launching it again. When it works, it does help a lot to inspect elements and play around with some settings in the simulator.
