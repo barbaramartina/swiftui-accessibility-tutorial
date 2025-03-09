@@ -1,4 +1,10 @@
 # VoiceOver
+
+
+<kbd>
+<img width="573" alt="Screenshot 2025-03-07 at 11 42 12 PM" src="https://github.com/user-attachments/assets/c5e8019a-d192-4d06-ab6c-06ef5b964837" />
+</kbd>
+
 For VoiceOver, what you could do within your app includes:
 
 - Adding appropriate descriptions for relevant images
