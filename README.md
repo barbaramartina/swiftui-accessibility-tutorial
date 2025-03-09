@@ -414,7 +414,7 @@ What all mobile app and websites should comply to is defined by the directive in
 | **Font and Layout Requirements**                                 | Information must be presented in appropriate fonts that are the right size and shape, with adjustable spacing between letters, lines, and paragraphs. |
 | **Contrast and Use Scenario Consideration**                      | Information must be presented with enough contrast and consider anticipated use scenarios.                      |
 
-t must also be presented in fonts that are appropriate in size and shape, take into account anticipated use scenarios, use enough contrast, and have adjustable spacing between letters, lines, and paragraphs.
+
 
 ### Requirements on the instructions for use of a product
 They should be made available through multiple sensory channels, presented in fonts that are appropriate in size and shape, consider anticipated usage scenarios and use enough contrast, with adjustable letter, line, and paragraph spacing, and be made available in text formats that can be used to create alternate assistive formats. 
